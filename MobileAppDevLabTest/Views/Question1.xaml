@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileAppDevLabTest.Views.Question1"
+             Title="Question1">
+    <ScrollView>
+        <StackLayout>
+            <Grid VerticalOptions="CenterAndExpand"
+                  RowDefinitions="Auto,Auto"
+                  ColumnDefinitions="Auto,*"
+                  Margin="20">
+
+                <Slider x:Name="slider"
+                        Minimum="0"
+                        Maximum="100"
+                        ValueChanged="OnSliderValueChanged"
+                        ThumbColor="Red"
+                        MinimumTrackColor="Blue"
+                        MaximumTrackColor="Red"
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        HorizontalOptions="FillAndExpand"/>
+
+                <Label x:Name="labelValue"
+                       Grid.Row="0"
+                       Grid.Column="0"
+                       Text="0"
+                       VerticalOptions="Center"
+                       HorizontalOptions="End"/>
+
+                <Label x:Name="labelResult"
+                       Grid.Row="1"
+                       Grid.Column="0"
+                       Grid.ColumnSpan="2"
+                       Text="Failed"
+                       TextColor="Red"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Start"
+                       FontSize="Medium"
+                       Margin="0,10,0,0"/>
+
+
+            </Grid>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
